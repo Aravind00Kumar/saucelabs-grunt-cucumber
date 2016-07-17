@@ -1,0 +1,11 @@
+<h2 class="page-header">
+    {{settingsCtrl.title}}
+</h2>
+<h3>Themes</h3>
+<div class="themes" >
+
+    <div ng-repeat="theme in settingsCtrl.themes track by theme.id" class="item" 
+      ng-checked="$root.current.theme === theme" ng-class="theme.name"
+      ng-click="settingsCtrl.changeTheme(theme)">
+    </div>
+</div>

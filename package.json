@@ -1,0 +1,30 @@
+{
+  "name": "saucelabs-grunt-cucumber",
+  "version": "1.0.0",
+  "description": "Sample project to run cucumberjs acceptance tests in saucelabs using protractor and grunt task runner",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aravind00Kumar/saucelabs-grunt-cucumber.git"
+  },
+  "keywords": [
+    "cucumber",
+    "saucelabs",
+    "protractor"
+  ],
+  "author": "Aravind Kumar P",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aravind00Kumar/saucelabs-grunt-cucumber/issues"
+  },
+  "homepage": "https://github.com/Aravind00Kumar/saucelabs-grunt-cucumber#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "cucumber": "^1.2.1",
+    "grunt-express": "^1.4.1",
+    "protractor-cucumber-framework": "^0.6.0"
+  }
+}

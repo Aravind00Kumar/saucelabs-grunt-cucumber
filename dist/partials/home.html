@@ -1,0 +1,30 @@
+<h2>
+    {{homeCtrl.title}}
+</h2>
+<div class="panel">
+    <div class="header">
+        <div class="title clear">
+            <i class="fa fa-4x fa-building-o"><span> {{homeCtrl.name}} </span></i>
+            <div class="message">
+                <strong class="count" ng-bind="homeCtrl.unfinishedTasksCount"> </strong>
+                <div class="desc"> {{homeCtrl.unfinishedTasksCount!==0 ? 'Need to be finished!' : 'Hurrah all tasks completed' }} </div>
+            </div>
+        </div>
+        <div class="new">
+            <input placeholder="New task" ng-model="homeCtrl.text" />
+            <button ng-click="homeCtrl.add()">Add</button>
+        </div>
+    </div>
+    <div class="body">
+        <ul class="task-list">
+            <li class="task" ng-repeat="task in homeCtrl.todoList track by task.id" ng-class="{select: homeCtrl.selected===task}">
+                <input type="checkbox" ng-checked="task.status" ng-click="homeCtrl.changeStatus(task)" />
+                <label ng-click="homeCtrl.select(task)" ng-class="{complete: task.status===true}"> {{task.text}}</label>
+                <ul ng-show="homeCtrl.selected===task" class="options clear">
+                    <li ng-click="homeCtrl.remove(task)"> <button> <i class="fa fa-trash"/> </button> </li>
+                    <li> <button> <i class="fa fa-star"/> </button> </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

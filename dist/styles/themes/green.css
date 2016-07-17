@@ -1,0 +1,119 @@
+
+/*
+    base color: rgba(0, 150, 136, 1);
+                rgba(85, 85, 85, 0.2);
+    font-color: #555, #fff
+    sidebar: #f2f2f2
+
+    panel-base: rgb(51, 122, 183)
+
+*/
+
+header h1 {
+    background: rgba(0, 150, 136, 1);
+}
+
+header a {
+    color: #FFF;
+}
+
+/* Large Screen */
+
+aside.sidebar {
+    background: #f2f2f2;
+}
+
+
+aside.sidebar ul li a {
+    color: #555;
+}
+
+aside.sidebar ul li a:hover {
+    color: #555;
+    background-color: rgba(85, 85, 85, 0.1);
+}
+
+aside.sidebar ul li a.select {
+    color: #FFF;
+    background-color: rgba(0, 150, 136, 0.4);
+}
+
+aside.sidebar ul li a.select:hover {
+    color: #FFF;
+    background-color: rgba(0, 150, 136, 0.5);
+}
+
+
+.page-header {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+.panel {
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    border-color: rgba(0, 150, 136, .3);
+}
+
+.panel .header {
+    color: #fff;
+    background-color: rgba(0, 150, 136, 1);
+}
+
+.panel .header .new input {
+    background: transparent;
+    border-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+    outline-color: transparent;
+}
+
+.panel .header .new button {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    outline-color: transparent;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.panel .header .new button:hover {
+    border: 1px solid rgba(255, 255, 255, .5);
+}
+
+.panel .header .new button:active {
+    border: 1px solid rgba(255, 255, 255, .5);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+
+.panel .body ul li {
+    background-color: transparent;
+}
+
+.panel .body ul li {
+    background-color: transparent;
+}
+.panel .body ul li:hover {
+    background-color: rgba(85, 85, 85, 0.05);
+}
+
+.panel .body ul li.select {
+    color: #FFF;
+    background-color: rgba(85, 85, 85, 0.2);
+}
+
+.panel .body ul li.select:hover {
+    color: #FFF;
+    background-color: rgba(85, 85, 85, 0.2);
+}
+
+.panel .body ul li .options li {
+    background-color: transparent;
+}
+
+.panel .body ul li .options li button {
+    outline-color: transparent;
+    background-color: transparent;
+    color: rgba(0, 150, 136, 1);
+}
+
+.panel .body ul li .options li button:hover, .panel .body ul li .options li button:active {
+    background: rgba(0, 0, 0, 0.07);
+}

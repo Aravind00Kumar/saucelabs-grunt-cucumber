@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title> What todo Application</title>
+    <link rel="stylesheet" type="text/css" href="./libs/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="./styles/main.css">
+    <link rel="stylesheet" type="text/css" href="./styles/themes.css">
+    
+    <link rel="stylesheet" ng-href="./styles/themes/{{$root.current.theme.name}}.css">
+
+</head>
+
+<body>
+    <header>
+        <h1><a href="#/home"><i class="fa fa-th-list"> </i> What Todo</a> </h1>
+    </header>
+
+    <article class="container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#/home" ng-class="{'select': $root.current.stateName === 'home'}"> <i class="fa fa-home"></i><span>Home</span></a></li>
+                <li><a href="#/settings" ng-class="{'select': $root.current.stateName === 'settings'}"> <i class="fa fa-gear"></i><span>Settings</span></a></li>
+                <li><a href="#/help" ng-class="{'select': $root.current.stateName === 'help'}"><i class="fa fa-question-circle"></i><span>Help</span></a>
+                <li><a href="#/about" ng-class="{'select': $root.current.stateName === 'about'}"><i class="fa fa-info-circle"></i><span>About</span></a>
+            </ul>
+        </aside>
+        <section class="context">
+            <div class="content">
+                <ui-view></ui-view>
+            </div>
+        </section>
+
+    </article>
+
+
+    <section>
+        <script src="./libs/jquery/dist/jquery.js"></script>
+        <script src="./libs/underscore/underscore.js"></script>
+        <script src="./libs/angular/angular.js"></script>
+        <script src="./libs/angular-ui-router/release/angular-ui-router.js"></script>
+
+        <script src="./app.js"></script>
+        <script src="./services/todo-svc.js"></script>
+        <script src="./services/theme-svc.js"></script>
+        
+    </section>
+
+</body>
+
+</html>
