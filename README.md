@@ -34,12 +34,12 @@ There are four tasks configured in grunt task runner with two categories
 
 > debugging 
 > - Open `saucelabs-grunt-cucumber` from Visual Studio Code
-> - Put break point from the IDE
+> - Put break point in the IDE
 > - Navigate to the `..\saucelabs-grunt-cucumber>` from command prompt
 > - Execute debug task (ex: `grunt debug`)
 > - Start debugging `F5` from Visual Studio Code
 
-#### Start saucelabs tunnel
+### Start saucelabs tunnel
 - Navigate to the `saucelabs-grunt-cucumber\bin\sc-4.3.16-win32\bin>` from command prompt
 - execute command `sc.exe -u <UserName> -k <AccessKey> --tunnel-identifier myTunnel --no-remove-colliding-tunnels --wait-tunnel-shutdown`
   - Replace `<UserName>` with saucelabs username and `<AccessKey>` with saucelabs access key
