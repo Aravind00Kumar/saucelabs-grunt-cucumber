@@ -49,3 +49,8 @@ background-color: rgb(51, 122, 183);
 .themes .item.orange{
     background-color: rgba(255, 152, 0, 1);
 }
+
+
+header {
+        box-shadow: 1px 1px 4px rgba(85, 85, 85, 0.5)
+}

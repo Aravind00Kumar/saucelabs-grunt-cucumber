@@ -4,7 +4,8 @@ html, body {
 }
 
 html, body, div, input, span, a {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family:"Roboto", Verdana, sans-serif;
     outline-color: transparent;
     -webkit-user-select: none;
     /* webkit (safari, chrome) browsers */
@@ -28,6 +29,7 @@ header {
     -khtml-user-select: none;
     /* webkit (konqueror) browsers */
     -ms-user-select: none;
+    z-index: 1;
 }
 
 header h1 {
