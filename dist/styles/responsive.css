@@ -1,0 +1,40 @@
+@media (min-width:320px) {
+    /* smartphones, iPhone, portrait 480x320 phones */
+}
+
+@media (min-width:481px) {
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+}
+
+@media (min-width:641px) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+}
+
+@media (max-width:961px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    article.container .sidebar, article.container .sidebar.large,
+    article.container aside.sidebar ul, article.container aside.sidebar.large ul,
+    article.container aside.sidebar.short, article.container aside.sidebar.short ul {
+        width: 50px;
+    }
+    aside.sidebar ul li span, aside.sidebar.large ul li span,
+    article.container aside.sidebar.short ul li span {
+        display: none;
+    }
+    article.container aside.sidebar ~ .context, article.container aside.sidebar.large ~ .context,
+    article.container aside.sidebar.short ~ .context {
+        padding-left: 50px;
+    }
+    article.container aside.sidebar.large ul li .fa,
+    article.container aside.sidebar.short ul li .fa {
+        padding-right: 0;
+    }
+    article.container aside.sidebar.large ul li,
+    article.container aside.sidebar.short ul li {
+        text-indent: 18px;
+    }
+}
+
+@media (min-width:1025px) {
+    /* big landscape tablets, laptops, and desktops */
+}

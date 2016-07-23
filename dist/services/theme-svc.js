@@ -11,7 +11,9 @@
             new Theme('cherry'),
             new Theme('green'),
             new Theme('blue'),
-            new Theme('violet')
+            new Theme('violet'),
+            new Theme('gray'),
+            new Theme('orange')
         ];
 
         function getAll(){

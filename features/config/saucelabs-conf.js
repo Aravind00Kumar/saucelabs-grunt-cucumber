@@ -18,30 +18,62 @@ exports.config = {
     var caps = browser.getCapabilities()
   },
 
-  capabilities: {
-    'browserName': 'chrome',
-    'version': '50',
-    'platform': 'Windows 7',
-    'tunnel-identifier': 'myTunnel',
-    "build": "build-1234",
-    'name': 'grunt-cucumber-chrome'
-  },
-  allScriptsTimeout: 20000,
-  // Options to be passed to Jasmine-node.
-  jasmineNodeOpts: {
-    showColors: true,
-    defaultTimeoutInterval: 100000,
-    isVerbose: true
-  },
-  // multiCapabilities: [{
-  //   browserName: 'chrome',
-  //   version: '50',
-  //   platform: 'Windows 7',
-  //   name: "chrome-tests",
-  //   shardTestFiles: true,
-  //   maxInstances: 1
-  // }],
+  // capabilities: {
+  //   'browserName': 'chrome',
+  //   'version': '50',
+  //   'platform': 'Windows 7',
+  //   'tunnel-identifier': 'CucumberTunnel',
+  //   "build": "build-1234",
+  //   'name': 'grunt-cucumber-chrome'
+  // },
 
+  // capabilities: {
+  //     'tunnel-identifier': 'CucumberTunnel',
+  //     'browserName': 'safari',
+  //     'platform': 'OS X 10.11',
+  //     'version': '9.0',
+  //     'name': 'grunt-cucumber-safari'
+  // },
+
+  // allScriptsTimeout: 20000,
+  // getPageTimeout: 20000,
+  // // Options to be passed to Jasmine-node.
+  // jasmineNodeOpts: {
+  //   showColors: true,
+  //   defaultTimeoutInterval: 20000,
+  //   isVerbose: true
+  // },
+  multiCapabilities: [
+    {
+      'tunnel-identifier': 'CucumberTunnel',
+      'browserName': 'chrome',
+      'platform': 'Windows 7',
+      'version': '50',
+      'name': 'grunt-cucumber-chrome',
+      'recordVideo':false,
+      'recordScreenshots': false
+    }
+    ,
+    {
+      'tunnel-identifier': 'CucumberTunnel',
+      'browserName': 'firefox',
+      'platform': 'Linux',
+      'version': '45.0',
+      'name': 'grunt-cucumber-firefox',
+      'recordVideo':false,
+      'recordScreenshots': false
+    }
+    ,
+    {
+      'tunnel-identifier': 'CucumberTunnel',
+      'browserName': 'safari',
+      'platform': 'OS X 10.11',
+      'version': '9.0',
+      'name': 'grunt-cucumber-safari',
+      'recordVideo':false,
+      'recordScreenshots': false
+    }
+  ],
   onComplete: function () {
 
     var printSessionId = function (jobName) {

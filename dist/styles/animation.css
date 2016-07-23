@@ -1,0 +1,18 @@
+body[animation="true"] article.container .sidebar, 
+body[animation="true"] article.container aside.sidebar ul{
+    -webkit-transition: ease-in-out, width .15s ease-in-out;
+    -moz-transition: ease-in-out, width .15s ease-in-out;
+    transition: ease-in-out, width .15s ease-in-out;
+}
+
+body[animation="true"] article.container .sidebar ~.context  {
+    -webkit-transition: ease-in-out, padding .15s ease-in-out;
+    -moz-transition: ease-in-out, padding .15s ease-in-out;
+    transition: ease-in-out, padding .15s ease-in-out;
+}
+
+body[animation="true"] aside.sidebar ul li a {
+    -webkit-transition:  background-color 150ms linear;
+    -moz-transition: background-color 150ms linear;
+    transition:  background-color 150ms linear;
+}

@@ -1,11 +1,18 @@
-<h2 class="page-header">
-    {{settingsCtrl.title}}
-</h2>
-<h3>Themes</h3>
-<div class="themes" >
+<div class="settings">
+    <h2 class="page-header">
+        {{settingsCtrl.title}}
+    </h2>
+    <h3>Themes</h3>
+    <div class="themes">
 
-    <div ng-repeat="theme in settingsCtrl.themes track by theme.id" class="item" 
-      ng-checked="$root.current.theme === theme" ng-class="theme.name"
-      ng-click="settingsCtrl.changeTheme(theme)">
+        <div ng-repeat="theme in settingsCtrl.themes track by theme.id" class="item" ng-checked="$root.current.theme === theme" ng-class="theme.name"
+            ng-click="settingsCtrl.changeTheme(theme)">
+        </div>
+
+    </div>
+
+    <h3>Animation</h3>
+    <div class="animation">
+        <input type="checkbox" ng-checked="$root.current.isAnimationEnabled" ng-click="$root.current.changeAnimation()"/> Enable Animation
     </div>
 </div>

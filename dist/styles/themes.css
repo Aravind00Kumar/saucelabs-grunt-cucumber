@@ -43,3 +43,9 @@ background-color: rgb(51, 122, 183);
 .themes .item.cherry{
     background-color: rgba(233, 30, 99, 1);
 }
+.themes .item.gray{
+    background-color: rgba(96, 125, 139, 1);
+}
+.themes .item.orange{
+    background-color: rgba(255, 152, 0, 1);
+}

@@ -3,15 +3,37 @@
     angular.module('app', ['ui.router'])
         .run(['$rootScope', '$timeout', 'theme-service', function ($rootScope, $timeout, themeService) {
 
-            $rootScope.current =  {
-                theme: themeService.getAll()[0],
-                stateName:''
+            function init(root) {
+                root.current = {
+                    theme: themeService.getAll()[0],
+                    stateName: '',
+                    sidebarmode: 'large',
+                    isAnimationEnabled: true,
+                    hamburgerClick: function () {
+                        if ($rootScope.current.sidebarmode === '') {
+                            $rootScope.current.sidebarmode = 'large';
+                        } else {
+                            $rootScope.current.sidebarmode = $rootScope.current.sidebarmode === 'large' ? 'short' : 'large';
+                        }
+                    },
+                    changeAnimation: function () {
+                        $rootScope.current.isAnimationEnabled = !$rootScope.current.isAnimationEnabled;
+                    }
+                }
             }
 
-            $rootScope.$on('$stateChangeSuccess',
-                function (event, toState, toParams, fromState, fromParams) {
-                    $rootScope.current.stateName = toState.name;
-            });
+            function registerEvents(root) {
+                root.$on('$stateChangeSuccess',
+                    function (event, toState, toParams, fromState, fromParams) {
+                        $rootScope.current.stateName = toState.name;
+                    });
+            }
+            function activate(root) {
+                init(root);
+                registerEvents(root);
+            }
+            activate($rootScope);
+
         }])
 
         // route configuration
@@ -102,16 +124,16 @@
 
         }])
 
-        .controller('SettingsController', ['$rootScope','theme-service',function ($rootScope,themeService) {
+        .controller('SettingsController', ['$rootScope', 'theme-service', function ($rootScope, themeService) {
             var vm = this;
-            
+
             this.title = 'Settings';
 
             this.themes = themeService.getAll();
-            
-            this.changeTheme = function(item){
-                if($rootScope.current.theme!==item)
-                    $rootScope.current.theme =  item;
+
+            this.changeTheme = function (item) {
+                if ($rootScope.current.theme !== item)
+                    $rootScope.current.theme = item;
             }
 
         }])
