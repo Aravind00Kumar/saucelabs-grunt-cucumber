@@ -22,7 +22,7 @@
         <ul class="task-list">
             <li class="task" ng-repeat="task in homeCtrl.todoList track by task.id" ng-class="{select: homeCtrl.selected===task}">
                 <input type="checkbox" ng-checked="task.status" ng-click="homeCtrl.changeStatus(task)" />
-                <label ng-click="homeCtrl.select(task)" ng-class="{complete: task.status===true}"> {{task.text}}</label>
+                <div class="label" ng-click="homeCtrl.select(task)" ng-class="{complete: task.status===true}"> {{task.text}}</div>
                 <ul ng-show="homeCtrl.selected===task" class="options clear">
                     <li ng-click="homeCtrl.remove(task)"> <button> <i class="fa fa-trash"/> </button> </li>
                     <li> <button> <i class="fa fa-star"/> </button> </li>

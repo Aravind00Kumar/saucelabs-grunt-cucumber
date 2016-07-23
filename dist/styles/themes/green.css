@@ -109,11 +109,16 @@ aside.sidebar ul li a.select:hover {
 }
 
 .panel .body ul li .options li button {
+    border: 1px solid rgba(255, 255, 255, 0.1);
     outline-color: transparent;
-    background-color: transparent;
-    color: rgba(0, 150, 136, 1);
+    background: transparent;
+    color: #555;
 }
 
-.panel .body ul li .options li button:hover, .panel .body ul li .options li button:active {
+.panel .body ul li .options li button:hover {
     background: rgba(0, 0, 0, 0.07);
+}
+.panel .body ul li .options li button:active {
+    color: #FFF;
+    background-color: rgba(0, 150, 136, 0.4);
 }

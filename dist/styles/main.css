@@ -6,6 +6,13 @@ html, body {
 html, body, div, input, span, a {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     outline-color: transparent;
+    -webkit-user-select: none;
+    /* webkit (safari, chrome) browsers */
+    -moz-user-select: none;
+    /* mozilla browsers */
+    -khtml-user-select: none;
+    /* webkit (konqueror) browsers */
+    -ms-user-select: none;
 }
 
 header {
@@ -14,10 +21,13 @@ header {
     height: 50px;
     top: 0;
     left: 0;
-    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
-    -moz-user-select: none; /* mozilla browsers */
-    -khtml-user-select: none; /* webkit (konqueror) browsers */
-    -ms-user-select: none; 
+    -webkit-user-select: none;
+    /* webkit (safari, chrome) browsers */
+    -moz-user-select: none;
+    /* mozilla browsers */
+    -khtml-user-select: none;
+    /* webkit (konqueror) browsers */
+    -ms-user-select: none;
 }
 
 header h1 {
@@ -32,15 +42,16 @@ header a {
     cursor: pointer;
 }
 
-header a.ham{
+header a.ham {
     padding: 5px 6px;
 }
 
-header ~ article.container{
+header ~ article.container {
     position: relative;
 }
+
 header ~ article.container, aside.sidebar {
-    top:50px;
+    top: 50px;
 }
 
 article h1, article h2, article h3, article h4, article h5, article p {
@@ -93,10 +104,10 @@ aside.sidebar ul li a:hover {
     text-decoration: none;
 }
 
+
 /* Large Screens */
 
-article.container .sidebar, article.container .sidebar.large,
-article.container aside.sidebar ul, article.container aside.sidebar.large ul  {
+article.container .sidebar, article.container .sidebar.large, article.container aside.sidebar ul, article.container aside.sidebar.large ul {
     width: 320px;
 }
 
@@ -273,15 +284,15 @@ article.container .context h4 {
     top: 15px;
 }
 
-.panel .body .task-list .task label {
-    position: absolute;
-    top: 0;
-    left: 40px;
-    display: block;
+.panel .body .task-list .task .label {
+    margin-left: 40px;
+    overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
 }
 
-.panel .body .task-list .task label.complete {
+.panel .body .task-list .task .label.complete {
     text-decoration: line-through;
 }
 
