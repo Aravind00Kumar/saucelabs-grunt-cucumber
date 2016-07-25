@@ -51,28 +51,30 @@ exports.config = {
       'version': '50',
       'name': 'grunt-cucumber-chrome',
       'recordVideo':false,
-      'recordScreenshots': false
+      'recordScreenshots': false,
+      "build": "build-1234"
     }
-    ,
-    {
-      'tunnel-identifier': 'CucumberTunnel',
-      'browserName': 'firefox',
-      'platform': 'Linux',
-      'version': '45.0',
-      'name': 'grunt-cucumber-firefox',
-      'recordVideo':false,
-      'recordScreenshots': false
-    }
-    ,
-    {
-      'tunnel-identifier': 'CucumberTunnel',
-      'browserName': 'safari',
-      'platform': 'OS X 10.11',
-      'version': '9.0',
-      'name': 'grunt-cucumber-safari',
-      'recordVideo':false,
-      'recordScreenshots': false
-    }
+    // ,
+    // {
+    //   'tunnel-identifier': 'CucumberTunnel',
+    //   'browserName': 'firefox',
+    //   'platform': 'Linux',
+    //   'version': '45.0',
+    //   'name': 'grunt-cucumber-firefox',
+    //   'recordVideo':false,
+    //   'recordScreenshots': false,
+    //   "build": "build-1234"
+    // }
+    // ,
+    // {
+    //   'tunnel-identifier': 'CucumberTunnel',
+    //   'browserName': 'safari',
+    //   'platform': 'OS X 10.11',
+    //   'version': '9.0',
+    //   'name': 'grunt-cucumber-safari',
+    //   'recordVideo':false,
+    //   'recordScreenshots': false
+    // }
   ],
   onComplete: function () {
 

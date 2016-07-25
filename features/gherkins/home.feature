@@ -1,6 +1,6 @@
 Feature: What todo application
  In order to add todo list
- As a a user
+ As a user
  I want a home page with todo list
  So that I can add remove todo items
 
