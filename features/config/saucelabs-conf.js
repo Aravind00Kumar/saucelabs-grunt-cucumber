@@ -13,7 +13,6 @@ exports.config = {
     format: 'pretty'
   },
   // restartBrowserBetweenTests: true,
-
   onPrepare: function () {
     var caps = browser.getCapabilities()
   },
@@ -50,7 +49,7 @@ exports.config = {
       'platform': 'Windows 7',
       'version': '50',
       'name': 'grunt-cucumber-chrome',
-      'recordVideo':false,
+      'recordVideo': false,
       'recordScreenshots': false,
       "build": "build-1234"
     }
